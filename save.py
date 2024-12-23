@@ -11,11 +11,12 @@ def game_save(two_or_one, points):
     if two_or_one == 1:
         #Case A: single game
         name_player = input("Please enter your name: ")
+        #points_player = chr(points[2])
         #Create the path of the file
         file_name = os.path.join(directory_path, "single_game.txt")
         #Write the file with the data
         with open(file_name, "w") as archivo:
-            archivo.write(f"{name_player},{points[0]}\n")
+            archivo.write(f"{name_player},{points[2]}\n")
     #Case B: multiplayer game
     else:
         name_player1 = input("Please enter the name of the player 1: ")
@@ -49,7 +50,7 @@ def load_game(file_name):
                 players.append(player)
         return players
     except FileNotFoundError:
-        print("The file of data has been deleted.\n")
+        print("The file of data has been deleted or isn't a save game. Create a new game.\n")
         return []
 
 
