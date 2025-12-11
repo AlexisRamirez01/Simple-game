@@ -1,0 +1,30 @@
+# Ignorar entornos virtuales
+venv/
+.venv/
+ENV/
+env/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de logs
+*.log
+
+# Configuración de editores
+.vscode/
+.idea/
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de pruebas y cobertura
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Archivos de dependencias si se usan virtualenvwrapper
+pip-log.txt
+pip-delete-this-directory.txt
